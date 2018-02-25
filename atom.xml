@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>hzliang</title>
+  <title>share</title>
   
-  <subtitle>AI</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://hzliang.github.io/"/>
+  <link href="https://hzliang.github.io/"/>
   <updated>2018-02-25T05:11:34.924Z</updated>
-  <id>http://hzliang.github.io/</id>
+  <id>https://hzliang.github.io/</id>
   
   <author>
     <name>hzliang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>aaa</title>
-    <link href="http://hzliang.github.io/2018/02/24/aaa/"/>
-    <id>http://hzliang.github.io/2018/02/24/aaa/</id>
+    <link href="https://hzliang.github.io/2018/02/24/aaa/"/>
+    <id>https://hzliang.github.io/2018/02/24/aaa/</id>
     <published>2018-02-24T15:23:32.000Z</published>
     <updated>2018-02-25T05:11:34.924Z</updated>
     
@@ -89,8 +89,8 @@ version: false
   
   <entry>
     <title>AI</title>
-    <link href="http://hzliang.github.io/2018/02/24/test/"/>
-    <id>http://hzliang.github.io/2018/02/24/test/</id>
+    <link href="https://hzliang.github.io/2018/02/24/test/"/>
+    <id>https://hzliang.github.io/2018/02/24/test/</id>
     <published>2018-02-24T10:15:54.000Z</published>
     <updated>2018-02-24T11:22:01.798Z</updated>
     
