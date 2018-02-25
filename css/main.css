@@ -1,3 +1,7 @@
+code {
+  color: #d05 !important;
+  background: #eee !important;
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -188,7 +192,7 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: #555;
+  color: #353535;
   background: #f5f7f9;
 }
 @media (max-width: 767px) {
@@ -306,7 +310,7 @@ hr {
 }
 blockquote {
   padding: 0 15px;
-  color: #666;
+  color: #353535;
   border-left: 4px solid #ddd;
 }
 blockquote cite::before {
@@ -498,7 +502,7 @@ code {
 code {
   padding: 2px 4px;
   word-wrap: break-word;
-  color: #555;
+  color: #353535;
   background: #eee;
   border-radius: 3px;
   font-size: 13px;
@@ -940,9 +944,9 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #555;
+  color: #353535;
   background: #fff;
-  border: 2px solid #555;
+  border: 2px solid #353535;
   text-decoration: none;
   border-radius: 2px;
   transition-property: background-color;
@@ -967,7 +971,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #353535;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1419,7 +1423,7 @@ pre .javascript .function {
   transition-property: background;
 }
 .posts-collapse .post-header:hover {
-  border-bottom-color: #666;
+  border-bottom-color: #353535;
 }
 .posts-collapse .post-header:hover::before {
   background: #222;
@@ -1444,7 +1448,7 @@ pre .javascript .function {
   opacity: 0.6;
 }
 .posts-collapse .post-title a {
-  color: #666;
+  color: #353535;
   border-bottom: none;
 }
 .page-home .post-type-quote .post-header,
@@ -1461,7 +1465,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: #353535;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1792,7 +1796,7 @@ pre .javascript .function {
 }
 .sidebar a {
   color: #999;
-  border-bottom-color: #555;
+  border-bottom-color: #353535;
 }
 .sidebar a:hover {
   color: #eee;
@@ -1932,7 +1936,7 @@ pre .javascript .function {
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-bottom-color: #555;
+  border-bottom-color: #353535;
   font-size: 13px;
 }
 .links-of-author a:before {
@@ -1943,7 +1947,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3bff73;
+  background: #5df2f9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1978,7 +1982,7 @@ pre .javascript .function {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 14px;
-  color: #555;
+  color: #353535;
 }
 .sidebar-nav li:hover {
   color: #fc6423;
@@ -2004,7 +2008,7 @@ pre .javascript .function {
 }
 .post-toc-empty {
   font-size: 14px;
-  color: #666;
+  color: #353535;
 }
 .post-toc-wrap {
   overflow: hidden;
@@ -2027,7 +2031,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #666;
+  color: #353535;
   border-bottom-color: #ccc;
 }
 .post-toc ol a:hover {
@@ -2511,7 +2515,7 @@ pre .javascript .function {
   width: 10px;
   height: 10px;
   opacity: 0.5;
-  background: #555;
+  background: #353535;
   border: 1px solid #fff;
   border-radius: 50%;
 }
@@ -2977,7 +2981,7 @@ pre .javascript .function {
 .sidebar-inner {
   box-sizing: border-box;
   width: 240px;
-  color: #555;
+  color: #353535;
   background: #fff;
   box-shadow: initial;
   border-radius: initial;
@@ -3002,7 +3006,7 @@ pre .javascript .function {
   clear: both;
 }
 .sidebar a {
-  color: #555;
+  color: #353535;
 }
 .sidebar a:hover {
   color: #222;
