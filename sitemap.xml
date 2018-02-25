@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hzliang.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-02-25T09:59:50.538Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hzliang.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-02-25T09:59:44.069Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hzliang.github.io/about/index.html</loc>
+    
+    <lastmod>2018-02-25T09:59:37.217Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hzliang.github.io/2018/02/24/test/</loc>
     
     <lastmod>2018-02-25T08:32:43.873Z</lastmod>
