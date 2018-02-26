@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hzliang.github.io/2018/02/24/hexo/</loc>
+    
+    <lastmod>2018-02-26T05:20:15.488Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hzliang.github.io/tags/index.html</loc>
     
     <lastmod>2018-02-26T05:16:34.979Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://hzliang.github.io/categories/index.html</loc>
     
     <lastmod>2018-02-26T05:16:23.942Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hzliang.github.io/2018/02/24/aaa/</loc>
-    
-    <lastmod>2018-02-26T05:11:12.707Z</lastmod>
     
   </url>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-02-26T05:11:12.707Z</updated>
+  <updated>2018-02-26T05:20:15.488Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo next主题</title>
-    <link href="https://hzliang.github.io/2018/02/24/aaa/"/>
-    <id>https://hzliang.github.io/2018/02/24/aaa/</id>
+    <title>Hexo next主题配置参考文档</title>
+    <link href="https://hzliang.github.io/2018/02/24/hexo/"/>
+    <id>https://hzliang.github.io/2018/02/24/hexo/</id>
     <published>2018-02-24T15:23:32.000Z</published>
-    <updated>2018-02-26T05:11:12.707Z</updated>
+    <updated>2018-02-26T05:20:15.488Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://segmentfault.com/a/1190000009544924#articleHeader28" target="_blank" rel="noopener">https://segmentfault.com/a/1190000009544924#articleHeader28</a></p><p><a href="https://www.dingxuewen.com/2017/03/11/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%B8%89/" target="_blank" rel="noopener">https://www.dingxuewen.com/2017/03/11/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%B8%89/</a><br><a href="https://www.dingxuewen.com/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%BA%8C/" target="_blank" rel="noopener">https://www.dingxuewen.com/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%BA%8C/</a></p>]]></content>
     
@@ -37,7 +37,7 @@
       <category term="前端" scheme="https://hzliang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="hexo" scheme="https://hzliang.github.io/tags/hexo/"/>
+      <category term="Hexo" scheme="https://hzliang.github.io/tags/Hexo/"/>
     
   </entry>
   
