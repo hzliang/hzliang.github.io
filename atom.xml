@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-03-12T03:35:51.777Z</updated>
+  <updated>2018-03-12T06:34:33.237Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intriguing properties of neural networks</title>
+    <link href="https://hzliang.github.io/2018/03/12/Intriguing-properties-of-neural-networks/"/>
+    <id>https://hzliang.github.io/2018/03/12/Intriguing-properties-of-neural-networks/</id>
+    <published>2018-03-12T06:22:35.000Z</published>
+    <updated>2018-03-12T06:34:33.237Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="神经网络中两个有趣的特点"><a href="#神经网络中两个有趣的特点" class="headerlink" title="神经网络中两个有趣的特点"></a>神经网络中两个有趣的特点</h3><ul><li>First, we find that there is no distinction between individual high level units and random linear combinations of high level units, according to various methods of unit analysis. It suggests that it is the space, rather than the individual units, that contains the semantic information in the high layers of neural networks.<br><br><strong> 高层级的网络激活单元不包含语义，语义存在于网络激活单元的空间向量中：某一次层的自然坐标和随机选择的激活单元组合得到的样本都有语义相似性。</strong></li><li>Second, we find that deep neural networks learn input-output mappings that are fairly discontinuous to a significant extent. We can cause the network to misclas- sify an image by applying a certain hardly perceptible perturbation, which is found by maximizing the network’s prediction error. In addition, the specific nature of these perturbations is not a random artifact of learning: the same perturbation can cause a different network, that was trained on a different subset of the dataset, to misclassify the same input.<br><br><strong> 对抗样本：对训练集做一些轻微的扰动，产生的样本，在训练好的模型上很可能得到错误的预测，并且这些样本即使是在使用不同的网络层数，参数，训练集训练得到的模型都会有这种现象。</strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;神经网络中两个有趣的特点&quot;&gt;&lt;a href=&quot;#神经网络中两个有趣的特点&quot; class=&quot;headerlink&quot; title=&quot;神经网络中两个有趣的特点&quot;&gt;&lt;/a&gt;神经网络中两个有趣的特点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;First, we find that ther
+      
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="https://hzliang.github.io/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>难分样本挖掘</title>
