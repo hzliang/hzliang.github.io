@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-03-12T02:50:09.363Z</updated>
+  <updated>2018-03-12T03:35:51.777Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hard-negative-mining</title>
+    <title>难分样本挖掘</title>
     <link href="https://hzliang.github.io/2018/03/12/hard-negative-mining/"/>
     <id>https://hzliang.github.io/2018/03/12/hard-negative-mining/</id>
     <published>2018-03-12T02:18:04.000Z</published>
-    <updated>2018-03-12T02:50:09.363Z</updated>
+    <updated>2018-03-12T03:35:51.777Z</updated>
     
     <content type="html"><![CDATA[<p>Let’s say I give you a bunch of images that contain one or more people, and I give you bounding boxes for each one. Your classifier will need both positive training examples (person) and negative training examples (not person).</p><p>For each person, you create a positive training example by looking inside that bounding box. But how do you create useful negative examples?</p><p>A good way to start is to generate a bunch of random bounding boxes, and for each that doesn’t overlap with any of your positives, keep that new box as a negative.</p><p>OK, so you have positives and negatives, so you train a classifier, and to test it out, you run it on your training images again with a sliding window. But it turns out that your classifier isn’t very good, because it throws a bunch of false positives (people detected where there aren’t actually people).</p><p>A hard negative is when you take that falsely detected patch, and explicitly create a negative example out of that patch, and add that negative to your training set. When you retrain your classifier, it should perform better with this extra knowledge, and not make as many false positives.</p><p><a href="https://www.pyimagesearch.com/2014/11/10/histogram-oriented-gradients-object-detection/" target="_blank" rel="noopener">pyimagesearch</a></p><p><em>Apply hard-negative mining.</em> For each image and each possible scale of each image in your negative training set, apply the sliding window technique and slide your window across the image. At each window compute your HOG descriptors and apply your classifier. If your classifier (incorrectly) classifies a given window as an object (and it will, there will absolutely be false-positives), record the feature vector associated with the false-positive patch along with the probability of the classification. This approach is called <em>hard-negative mining</em></p>]]></content>
     
