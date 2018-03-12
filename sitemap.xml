@@ -2,23 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hzliang.github.io/2018/03/12/hard-negative-mining/</loc>
-    
-    <lastmod>2018-03-12T02:19:42.143Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hzliang.github.io/2018/02/24/pandas/</loc>
-    
-    <lastmod>2018-02-26T08:01:05.103Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hzliang.github.io/2018/02/24/hexo/</loc>
     
-    <lastmod>2018-02-26T05:20:15.488Z</lastmod>
+    <lastmod>2018-03-12T02:51:15.216Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hzliang.github.io/2018/03/12/hard-negative-mining/</loc>
+    
+    <lastmod>2018-03-12T02:50:09.363Z</lastmod>
     
   </url>
   
