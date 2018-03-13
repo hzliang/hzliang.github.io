@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Kal</title>
   
-  
+  <subtitle>“too good to be true” performance is “a dead giveaway” of its existence</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-03-13T02:48:55.100Z</updated>
+  <updated>2018-03-13T06:42:25.669Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Data Leakage In Machine Learning</title>
+    <link href="https://hzliang.github.io/2018/03/13/Data-Leakage-In-Machine-Learning/"/>
+    <id>https://hzliang.github.io/2018/03/13/Data-Leakage-In-Machine-Learning/</id>
+    <published>2018-03-13T06:39:03.000Z</published>
+    <updated>2018-03-13T06:42:25.669Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="machine learning" scheme="https://hzliang.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="Data Leakage" scheme="https://hzliang.github.io/tags/Data-Leakage/"/>
+    
+  </entry>
   
   <entry>
     <title>理解数据类型</title>
@@ -43,11 +61,11 @@
   </entry>
   
   <entry>
-    <title>Intriguing properties of neural networks</title>
-    <link href="https://hzliang.github.io/2018/03/12/Intriguing-properties-of-neural-networks/"/>
-    <id>https://hzliang.github.io/2018/03/12/Intriguing-properties-of-neural-networks/</id>
+    <title>Intriguing Properties Of Neural Networks</title>
+    <link href="https://hzliang.github.io/2018/03/12/Intriguing-Properties-Of-Neural-Networks/"/>
+    <id>https://hzliang.github.io/2018/03/12/Intriguing-Properties-Of-Neural-Networks/</id>
     <published>2018-03-12T06:22:35.000Z</published>
-    <updated>2018-03-12T06:34:33.237Z</updated>
+    <updated>2018-03-13T06:40:43.411Z</updated>
     
     <content type="html"><![CDATA[<h3 id="神经网络中两个有趣的特点"><a href="#神经网络中两个有趣的特点" class="headerlink" title="神经网络中两个有趣的特点"></a>神经网络中两个有趣的特点</h3><ul><li>First, we find that there is no distinction between individual high level units and random linear combinations of high level units, according to various methods of unit analysis. It suggests that it is the space, rather than the individual units, that contains the semantic information in the high layers of neural networks.<br><br><strong> 高层级的网络激活单元不包含语义，语义存在于网络激活单元的空间向量中：某一次层的自然坐标和随机选择的激活单元组合得到的样本都有语义相似性。</strong></li><li>Second, we find that deep neural networks learn input-output mappings that are fairly discontinuous to a significant extent. We can cause the network to misclas- sify an image by applying a certain hardly perceptible perturbation, which is found by maximizing the network’s prediction error. In addition, the specific nature of these perturbations is not a random artifact of learning: the same perturbation can cause a different network, that was trained on a different subset of the dataset, to misclassify the same input.<br><br><strong> 对抗样本：对训练集做一些轻微的扰动，产生的样本，在训练好的模型上很可能得到错误的预测，并且这些样本即使是在使用不同的网络层数，参数，训练集训练得到的模型都会有这种现象。</strong></li></ul>]]></content>
     
@@ -68,10 +86,10 @@
   
   <entry>
     <title>难分样本挖掘</title>
-    <link href="https://hzliang.github.io/2018/03/12/hard-negative-mining/"/>
-    <id>https://hzliang.github.io/2018/03/12/hard-negative-mining/</id>
+    <link href="https://hzliang.github.io/2018/03/12/Hard-Negative-Mining/"/>
+    <id>https://hzliang.github.io/2018/03/12/Hard-Negative-Mining/</id>
     <published>2018-03-12T02:18:04.000Z</published>
-    <updated>2018-03-12T03:35:51.777Z</updated>
+    <updated>2018-03-13T06:40:03.569Z</updated>
     
     <content type="html"><![CDATA[<p>Let’s say I give you a bunch of images that contain one or more people, and I give you bounding boxes for each one. Your classifier will need both positive training examples (person) and negative training examples (not person).</p><p>For each person, you create a positive training example by looking inside that bounding box. But how do you create useful negative examples?</p><p>A good way to start is to generate a bunch of random bounding boxes, and for each that doesn’t overlap with any of your positives, keep that new box as a negative.</p><p>OK, so you have positives and negatives, so you train a classifier, and to test it out, you run it on your training images again with a sliding window. But it turns out that your classifier isn’t very good, because it throws a bunch of false positives (people detected where there aren’t actually people).</p><p>A hard negative is when you take that falsely detected patch, and explicitly create a negative example out of that patch, and add that negative to your training set. When you retrain your classifier, it should perform better with this extra knowledge, and not make as many false positives.</p><p><a href="https://www.pyimagesearch.com/2014/11/10/histogram-oriented-gradients-object-detection/" target="_blank" rel="noopener">pyimagesearch</a></p><p><em>Apply hard-negative mining.</em> For each image and each possible scale of each image in your negative training set, apply the sliding window technique and slide your window across the image. At each window compute your HOG descriptors and apply your classifier. If your classifier (incorrectly) classifies a given window as an object (and it will, there will absolutely be false-positives), record the feature vector associated with the false-positive patch along with the probability of the classification. This approach is called <em>hard-negative mining</em></p>]]></content>
     
@@ -87,7 +105,7 @@
       <category term="machine learning" scheme="https://hzliang.github.io/categories/machine-learning/"/>
     
     
-      <category term="Hard negative mining" scheme="https://hzliang.github.io/tags/Hard-negative-mining/"/>
+      <category term="Hard Negative Mining" scheme="https://hzliang.github.io/tags/Hard-Negative-Mining/"/>
     
   </entry>
   
@@ -96,7 +114,7 @@
     <link href="https://hzliang.github.io/2018/02/24/hexo/"/>
     <id>https://hzliang.github.io/2018/02/24/hexo/</id>
     <published>2018-02-24T15:23:32.000Z</published>
-    <updated>2018-03-12T02:53:12.071Z</updated>
+    <updated>2018-03-13T06:41:54.630Z</updated>
     
     <content type="html"><![CDATA[<ul><li><a href="https://segmentfault.com/a/1190000009544924#articleHeader28" target="_blank" rel="noopener">1</a></li><li><a href="https://www.dingxuewen.com/2017/03/11/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%B8%89/" target="_blank" rel="noopener">2</a></li><li><a href="https://www.dingxuewen.com/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%BA%8C/" target="_blank" rel="noopener">3</a></li></ul>]]></content>
     

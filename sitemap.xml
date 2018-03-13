@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hzliang.github.io/2018/03/13/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    <loc>https://hzliang.github.io/2018/03/13/Data-Leakage-In-Machine-Learning/</loc>
     
-    <lastmod>2018-03-13T02:48:55.100Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hzliang.github.io/2018/03/12/Intriguing-properties-of-neural-networks/</loc>
-    
-    <lastmod>2018-03-12T06:34:33.237Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hzliang.github.io/2018/03/12/hard-negative-mining/</loc>
-    
-    <lastmod>2018-03-12T03:35:51.777Z</lastmod>
+    <lastmod>2018-03-13T06:42:25.669Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://hzliang.github.io/2018/02/24/hexo/</loc>
     
-    <lastmod>2018-03-12T02:53:12.071Z</lastmod>
+    <lastmod>2018-03-13T06:41:54.630Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hzliang.github.io/2018/03/12/Intriguing-Properties-Of-Neural-Networks/</loc>
+    
+    <lastmod>2018-03-13T06:40:43.411Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hzliang.github.io/2018/03/12/Hard-Negative-Mining/</loc>
+    
+    <lastmod>2018-03-13T06:40:03.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hzliang.github.io/2018/03/13/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    
+    <lastmod>2018-03-13T02:48:55.100Z</lastmod>
     
   </url>
   
