@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-03-12T06:34:33.237Z</updated>
+  <updated>2018-03-13T02:45:46.824Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解数据类型</title>
+    <link href="https://hzliang.github.io/2018/03/13/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://hzliang.github.io/2018/03/13/理解数据类型/</id>
+    <published>2018-03-13T02:30:52.000Z</published>
+    <updated>2018-03-13T02:45:46.824Z</updated>
+    
+    <content type="html"><![CDATA[<p>总体上来讲，数据可以分为两种类型：定量数据和定性数据。</p><h3 id="定量数据"><a href="#定量数据" class="headerlink" title="定量数据"></a>定量数据</h3><p><strong>定量数据一般指可以测量的指标，比如高度、宽度、长度、温度、价格、面积、体积等。</strong></p><p><em>定量数据又可以分为连续型数据和离散型数据。</em></p><ul><li>一般我们说数数是离散型的，而尺寸是连续性特征，离散型数据一般说的是整型，比如家里几口人、有几个孩子等，这种不可以再用小数表示了。</li><li>连续数据则能够分得更细，比如小孩的高度可以分到米、分米、厘米、毫米等</li></ul><h3 id="定性数据"><a href="#定性数据" class="headerlink" title="定性数据"></a>定性数据</h3><p><strong>一般指描述性的特征，难以测量，但是可以观察到，比如味道、口味、颜色、吸引度等。</strong></p><p>定性数据往往用来分类事物，一般包括三大类：0-1数据(好坏)、属性数据(颜色)、有序数据(矮、中、高)。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;总体上来讲，数据可以分为两种类型：定量数据和定性数据。&lt;/p&gt;
+&lt;h3 id=&quot;定量数据&quot;&gt;&lt;a href=&quot;#定量数据&quot; class=&quot;headerlink&quot; title=&quot;定量数据&quot;&gt;&lt;/a&gt;定量数据&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;定量数据一般指可以测量的指标，比如高度
+      
+    
+    </summary>
+    
+      <category term="machine learning" scheme="https://hzliang.github.io/categories/machine-learning/"/>
+    
+    
+      <category term="数据类型" scheme="https://hzliang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Intriguing properties of neural networks</title>
