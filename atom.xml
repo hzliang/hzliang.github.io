@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-03-13T07:34:37.192Z</updated>
+  <updated>2018-03-13T07:38:38.839Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hzliang.github.io/2018/03/13/Data-Leakage-In-Machine-Learning/"/>
     <id>https://hzliang.github.io/2018/03/13/Data-Leakage-In-Machine-Learning/</id>
     <published>2018-03-13T06:39:03.000Z</published>
-    <updated>2018-03-13T07:34:37.192Z</updated>
+    <updated>2018-03-13T07:38:38.839Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="What-is-Data-Leakage-in-Machine-Learning"><a href="#What-is-Data-Leakage-in-Machine-Learning" class="headerlink" title="What is Data Leakage in Machine Learning?"></a>What is Data Leakage in Machine Learning?</h3><p>这里的数据泄漏更像是一种<strong>因果关系</strong>的泄漏，当某个特征是目标的<strong>果</strong>而不是<strong>因</strong>时，用该特征训练就会引进数据泄漏，所以在大数据时代不能仅仅关注数据，数据之间的因果关系同样重要。</p><ul><li><em>if any other feature whose value would not actually be available in practice at the time you’d want to use the model to make a prediction, is a feature that can introduce leakage to your model.</em><br><br><strong>当某个特征的值在预测的时候还无法得到，该特征可能会导致模型泄漏(用未来的数据做训练或预测)</strong></li><li><em>when the data you are using to train a machine learning algorithm happens to have the information you are trying to predict</em><br><br><strong>当训练集数据中恰好有预测集数据(预处理，数据未完全分开)</strong></li></ul><h3 id="Do-I-have-Data-Leakage"><a href="#Do-I-have-Data-Leakage" class="headerlink" title="Do I have Data Leakage?"></a>Do I have Data Leakage?</h3><p><strong>如果你的模型性能特别好的话，比如Auc~0.9+，则要当心是否引入了泄漏特征。</strong></p><p>总结：<br>数据泄露就是说用了不该用的数据，比如</p><ul><li>在训练模型时，利用了测试集的数据、信息(做归一化、均值、方差等要和验证机和测试集分开，用训练集的指标处理验证集和测试集)</li><li>在当前使用了未来的数据</li><li>在交叉验证进行调参时，使用了验证集的信息参与模型建立</li></ul><p><a href="https://machinelearningmastery.com/data-leakage-machine-learning" target="_blank" rel="noopener">Data Leakage in Machine Learning</a><br><br><a href="https://www.kaggle.com/dansbecker/data-leakage" target="_blank" rel="noopener">What is Data Leakage</a><br><br><a href="http://blog.csdn.net/jiandanjinxin/article/details/54633475" target="_blank" rel="noopener">再论数据科学竞赛中的Data Leakage</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="What-is-Data-Leakage-in-Machine-Learning"><a href="#What-is-Data-Leakage-in-Machine-Learning" class="headerlink" title="What is Data Leakage in Machine Learning?"></a>What is Data Leakage in Machine Learning?</h3><p>这里的数据泄漏更像是一种<strong>因果关系</strong>的泄漏，当某个特征是目标的<strong>果</strong>而不是<strong>因</strong>时，用该特征训练就会引进数据泄漏，所以在大数据时代不能仅仅关注数据的相关性，数据之间的因果关系同样重要。</p><ul><li><em>if any other feature whose value would not actually be available in practice at the time you’d want to use the model to make a prediction, is a feature that can introduce leakage to your model.</em><br><br><strong>当某个特征的值在预测的时候还无法得到，该特征可能会导致模型泄漏(用未来的数据做训练或预测)</strong></li><li><em>when the data you are using to train a machine learning algorithm happens to have the information you are trying to predict</em><br><br><strong>当训练集数据中恰好有预测集数据(预处理，数据未完全分开)</strong></li></ul><h3 id="Do-I-have-Data-Leakage"><a href="#Do-I-have-Data-Leakage" class="headerlink" title="Do I have Data Leakage?"></a>Do I have Data Leakage?</h3><p><strong>如果你的模型性能特别好的话，比如Auc~0.9+，则要当心是否引入了泄漏特征。</strong></p><p>总结：<br>数据泄露就是说用了不该用的数据，比如</p><ul><li>在训练模型时，利用了测试集的数据、信息(做归一化、均值、方差等要和验证机和测试集分开，用训练集的指标处理验证集和测试集)</li><li>在当前使用了未来的数据</li><li>在交叉验证进行调参时，使用了验证集的信息参与模型建立</li></ul><p><a href="https://machinelearningmastery.com/data-leakage-machine-learning" target="_blank" rel="noopener">Data Leakage in Machine Learning</a><br><br><a href="https://www.kaggle.com/dansbecker/data-leakage" target="_blank" rel="noopener">What is Data Leakage</a><br><br><a href="http://blog.csdn.net/jiandanjinxin/article/details/54633475" target="_blank" rel="noopener">再论数据科学竞赛中的Data Leakage</a></p>]]></content>
     
     <summary type="html">
     
