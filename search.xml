@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java虚拟机创建对象过程]]></title>
+    <url>%2F2018%2F03%2F20%2FJava%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[Java虚拟机创建对象过程分配空间 是否能定位到类引用，否则的话要进行类加载 分配内存：指针碰撞法和空闲列表法，根据垃圾回收器而不同 分配方式：1. 使用CAS配上失败重试的方法包装更新的院子操作 2. 不同的线程预先分配一块内存TLAB，只有重新分配TLAB是才需要加锁 初始化对象 对象头(运行时数据):哈希码、GC分代年龄、锁状态标志、线程持有锁等 实例数据: 类字段数据，包括从父类继承下来的字段 对齐填充: 必须8字节其实位置 对象的访问定位 使用句柄：句柄池中放有实力数据和类型数据的指针 直接访问：堆中对象存储必须包含类型数据指针]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Java虚拟机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Data Leakage In Machine Learning]]></title>
     <url>%2F2018%2F03%2F13%2FData-Leakage-In-Machine-Learning%2F</url>
     <content type="text"><![CDATA[What is Data Leakage in Machine Learning?这里的数据泄漏更像是一种因果关系的泄漏，当某个特征是目标的果而不是因时，用该特征训练就会引进数据泄漏，所以在大数据时代不能仅仅关注数据的相关性，数据之间的因果关系同样重要。 if any other feature whose value would not actually be available in practice at the time you’d want to use the model to make a prediction, is a feature that can introduce leakage to your model.当某个特征的值在预测的时候还无法得到，该特征可能会导致模型泄漏(用未来的数据做训练或预测) when the data you are using to train a machine learning algorithm happens to have the information you are trying to predict当训练集数据中恰好有预测集数据(预处理，数据未完全分开) Do I have Data Leakage?如果你的模型性能特别好的话，比如Auc~0.9+，则要当心是否引入了泄漏特征。 总结：数据泄露就是说用了不该用的数据，比如 在训练模型时，利用了测试集的数据、信息(做归一化、均值、方差等要和验证机和测试集分开，用训练集的指标处理验证集和测试集) 在当前使用了未来的数据 在交叉验证进行调参时，使用了验证集的信息参与模型建立 Data Leakage in Machine LearningWhat is Data Leakage再论数据科学竞赛中的Data Leakage]]></content>
