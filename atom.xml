@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hzliang.github.io/"/>
-  <updated>2018-03-19T16:27:00.449Z</updated>
+  <updated>2018-03-19T16:33:37.412Z</updated>
   <id>https://hzliang.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hzliang.github.io/2018/03/20/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%BF%87%E7%A8%8B/"/>
     <id>https://hzliang.github.io/2018/03/20/Java虚拟机创建对象过程/</id>
     <published>2018-03-19T16:14:57.000Z</published>
-    <updated>2018-03-19T16:27:00.449Z</updated>
+    <updated>2018-03-19T16:33:37.412Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Java虚拟机创建对象过程"><a href="#Java虚拟机创建对象过程" class="headerlink" title="Java虚拟机创建对象过程"></a>Java虚拟机创建对象过程</h3><h4 id="分配空间"><a href="#分配空间" class="headerlink" title="分配空间"></a>分配空间</h4><ol><li>是否能定位到类引用，否则的话要进行类加载</li><li>分配内存：指针碰撞法和空闲列表法，根据垃圾回收器而不同</li><li>分配方式：1. 使用CAS配上失败重试的方法包装更新的院子操作 2. 不同的线程预先分配一块内存TLAB，只有重新分配TLAB是才需要加锁</li></ol><h4 id="初始化对象"><a href="#初始化对象" class="headerlink" title="初始化对象"></a>初始化对象</h4><ol><li>对象头(运行时数据):哈希码、GC分代年龄、锁状态标志、线程持有锁等</li><li>实例数据: 类字段数据，包括从父类继承下来的字段</li><li>对齐填充: 必须8字节其实位置</li></ol><h4 id="对象的访问定位"><a href="#对象的访问定位" class="headerlink" title="对象的访问定位"></a>对象的访问定位</h4><ol><li>使用句柄：句柄池中放有实力数据和类型数据的指针</li><li>直接访问：堆中对象存储必须包含类型数据指针</li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="Java虚拟机创建对象过程"><a href="#Java虚拟机创建对象过程" class="headerlink" title="Java虚拟机创建对象过程"></a>Java虚拟机创建对象过程</h3><h4 id="分配空间"><a href="#分配空间" class="headerlink" title="分配空间"></a>分配空间</h4><ol><li>类数据：是否能定位到类引用，否则的话要进行类加载</li><li>分配内存：指针碰撞法和空闲列表法，根据垃圾回收器而不同</li><li>分配方式：1. 使用CAS配上失败重试的方法保证更新的原子操作 2. 不同的线程预先分配一块内存TLAB，只有重新分配TLAB是才需要加锁</li><li>初始化内存，java对象实例字段不需要初始化</li></ol><h4 id="初始化对象"><a href="#初始化对象" class="headerlink" title="初始化对象"></a>初始化对象</h4><ol><li>对象头(运行时数据):哈希码、GC分代年龄、锁状态标志、线程持有锁等</li><li>实例数据: 类字段数据，包括从父类继承下来的字段</li><li>对齐填充: 必须八字节整数倍起始位置</li></ol><h4 id="对象的访问定位"><a href="#对象的访问定位" class="headerlink" title="对象的访问定位"></a>对象的访问定位</h4><ol><li>使用句柄：句柄池中放有实力数据和类型数据的指针</li><li>直接访问：访问速度快，堆中对象存储必须包含类型数据指针，且对象数据移动地址后需要修改引用</li></ol>]]></content>
     
     <summary type="html">
     
