@@ -1,145 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>Java虚拟机创建对象过程</title>
-      <link href="/2018/03/20/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%BF%87%E7%A8%8B/"/>
-      <url>/2018/03/20/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%BF%87%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Java虚拟机创建对象过程"><a href="#Java虚拟机创建对象过程" class="headerlink" title="Java虚拟机创建对象过程"></a>Java虚拟机创建对象过程</h3><h4 id="分配空间"><a href="#分配空间" class="headerlink" title="分配空间"></a>分配空间</h4><ol><li>类数据：是否能定位到类引用，否则的话要进行类加载</li><li>分配内存：指针碰撞法和空闲列表法，根据垃圾回收器而不同</li><li>分配方式：1. 使用CAS配上失败重试的方法保证更新的原子操作 2. 不同的线程预先分配一块内存TLAB，只有重新分配TLAB是才需要加锁</li><li>初始化内存，java对象实例字段不需要初始化</li></ol><h4 id="初始化对象"><a href="#初始化对象" class="headerlink" title="初始化对象"></a>初始化对象</h4><ol><li>对象头(运行时数据):哈希码、GC分代年龄、锁状态标志、线程持有锁等</li><li>实例数据: 类字段数据，包括从父类继承下来的字段</li><li>对齐填充: 必须八字节整数倍起始位置</li></ol><h4 id="对象的访问定位"><a href="#对象的访问定位" class="headerlink" title="对象的访问定位"></a>对象的访问定位</h4><ol><li>使用句柄：句柄池中放有实力数据和类型数据的指针</li><li>直接访问：访问速度快，堆中对象存储必须包含类型数据指针，且对象数据移动地址后需要修改引用</li></ol>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[Java虚拟机创建对象过程]]></title>
+    <url>%2F2018%2F03%2F20%2FJava%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[Java虚拟机创建对象过程分配空间 类数据：是否能定位到类引用，否则的话要进行类加载 分配内存：指针碰撞法和空闲列表法，根据垃圾回收器而不同 分配方式：1. 使用CAS配上失败重试的方法保证更新的原子操作 2. 不同的线程预先分配一块内存TLAB，只有重新分配TLAB是才需要加锁 初始化内存，java对象实例字段不需要初始化 初始化对象 对象头(运行时数据):哈希码、GC分代年龄、锁状态标志、线程持有锁等 实例数据: 类字段数据，包括从父类继承下来的字段 对齐填充: 必须八字节整数倍起始位置 对象的访问定位 使用句柄：句柄池中放有实力数据和类型数据的指针 直接访问：访问速度快，堆中对象存储必须包含类型数据指针，且对象数据移动地址后需要修改引用]]></content>
       <categories>
-          
-          <category> java </category>
-          
+        <category>java</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Java虚拟机 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Data Leakage In Machine Learning</title>
-      <link href="/2018/03/13/Data-Leakage-In-Machine-Learning/"/>
-      <url>/2018/03/13/Data-Leakage-In-Machine-Learning/</url>
-      
-        <content type="html"><![CDATA[<h3 id="What-is-Data-Leakage-in-Machine-Learning"><a href="#What-is-Data-Leakage-in-Machine-Learning" class="headerlink" title="What is Data Leakage in Machine Learning?"></a>What is Data Leakage in Machine Learning?</h3><p>这里的数据泄漏更像是一种<strong>因果关系</strong>的泄漏，当某个特征是目标的<strong>果</strong>而不是<strong>因</strong>时，用该特征训练就会引进数据泄漏，所以在大数据时代不能仅仅关注数据的相关性，数据之间的因果关系同样重要。</p><ul><li><em>if any other feature whose value would not actually be available in practice at the time you’d want to use the model to make a prediction, is a feature that can introduce leakage to your model.</em><br><br><strong>当某个特征的值在预测的时候还无法得到，该特征可能会导致模型泄漏(用未来的数据做训练或预测)</strong></li><li><em>when the data you are using to train a machine learning algorithm happens to have the information you are trying to predict</em><br><br><strong>当训练集数据中恰好有预测集数据(预处理，数据未完全分开)</strong></li></ul><h3 id="Do-I-have-Data-Leakage"><a href="#Do-I-have-Data-Leakage" class="headerlink" title="Do I have Data Leakage?"></a>Do I have Data Leakage?</h3><p><strong>如果你的模型性能特别好的话，比如Auc~0.9+，则要当心是否引入了泄漏特征。</strong></p><p>总结：<br>数据泄露就是说用了不该用的数据，比如</p><ul><li>在训练模型时，利用了测试集的数据、信息(做归一化、均值、方差等要和验证机和测试集分开，用训练集的指标处理验证集和测试集)</li><li>在当前使用了未来的数据</li><li>在交叉验证进行调参时，使用了验证集的信息参与模型建立</li></ul><p><a href="https://machinelearningmastery.com/data-leakage-machine-learning" target="_blank" rel="noopener">Data Leakage in Machine Learning</a><br><br><a href="https://www.kaggle.com/dansbecker/data-leakage" target="_blank" rel="noopener">What is Data Leakage</a><br><br><a href="http://blog.csdn.net/jiandanjinxin/article/details/54633475" target="_blank" rel="noopener">再论数据科学竞赛中的Data Leakage</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>Java虚拟机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Data Leakage In Machine Learning]]></title>
+    <url>%2F2018%2F03%2F13%2FData-Leakage-In-Machine-Learning%2F</url>
+    <content type="text"><![CDATA[What is Data Leakage in Machine Learning?这里的数据泄漏更像是一种因果关系的泄漏，当某个特征是目标的果而不是因时，用该特征训练就会引进数据泄漏，所以在大数据时代不能仅仅关注数据的相关性，数据之间的因果关系同样重要。 if any other feature whose value would not actually be available in practice at the time you’d want to use the model to make a prediction, is a feature that can introduce leakage to your model.当某个特征的值在预测的时候还无法得到，该特征可能会导致模型泄漏(用未来的数据做训练或预测) when the data you are using to train a machine learning algorithm happens to have the information you are trying to predict当训练集数据中恰好有预测集数据(预处理，数据未完全分开) Do I have Data Leakage?如果你的模型性能特别好的话，比如Auc~0.9+，则要当心是否引入了泄漏特征。 总结：数据泄露就是说用了不该用的数据，比如 在训练模型时，利用了测试集的数据、信息(做归一化、均值、方差等要和验证机和测试集分开，用训练集的指标处理验证集和测试集) 在当前使用了未来的数据 在交叉验证进行调参时，使用了验证集的信息参与模型建立 Data Leakage in Machine LearningWhat is Data Leakage再论数据科学竞赛中的Data Leakage]]></content>
       <categories>
-          
-          <category> machine learning </category>
-          
+        <category>machine learning</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Data Leakage </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>理解数据类型</title>
-      <link href="/2018/03/13/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-      <url>/2018/03/13/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-      
-        <content type="html"><![CDATA[<p>总体上来讲，数据可以分为两种类型：定量数据和定性数据。</p><h3 id="定量数据"><a href="#定量数据" class="headerlink" title="定量数据"></a>定量数据</h3><p><strong>定量数据一般指可以测量的指标，比如高度、宽度、长度、温度、价格、面积、体积等。</strong></p><p><em>定量数据又可以分为连续型数据和离散型数据。</em></p><ul><li>一般我们说数数是离散型的，而尺寸是连续性特征，离散型数据一般说的是整型，比如家里几口人、有几个孩子等，这种不可以再用小数表示了。</li><li>连续数据则能够分得更细，比如小孩的高度可以分到米、分米、厘米、毫米等</li></ul><h3 id="定性数据"><a href="#定性数据" class="headerlink" title="定性数据"></a>定性数据</h3><p><strong>一般指描述性的特征，难以测量，但是可以观察到，比如味道、口味、颜色、吸引度等。</strong></p><p><em>定性数据往往用来分类事物，一般包括三大类：0-1数据(好坏)、属性数据(颜色)、有序数据(矮、中、高)。</em></p>]]></content>
-      
-      
+      <tags>
+        <tag>Data Leakage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[理解数据类型]]></title>
+    <url>%2F2018%2F03%2F13%2F%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[总体上来讲，数据可以分为两种类型：定量数据和定性数据。 定量数据定量数据一般指可以测量的指标，比如高度、宽度、长度、温度、价格、面积、体积等。 定量数据又可以分为连续型数据和离散型数据。 一般我们说数数是离散型的，而尺寸是连续性特征，离散型数据一般说的是整型，比如家里几口人、有几个孩子等，这种不可以再用小数表示了。 连续数据则能够分得更细，比如小孩的高度可以分到米、分米、厘米、毫米等 定性数据一般指描述性的特征，难以测量，但是可以观察到，比如味道、口味、颜色、吸引度等。 定性数据往往用来分类事物，一般包括三大类：0-1数据(好坏)、属性数据(颜色)、有序数据(矮、中、高)。]]></content>
       <categories>
-          
-          <category> machine learning </category>
-          
+        <category>machine learning</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据类型 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Intriguing Properties Of Neural Networks</title>
-      <link href="/2018/03/12/Intriguing-Properties-Of-Neural-Networks/"/>
-      <url>/2018/03/12/Intriguing-Properties-Of-Neural-Networks/</url>
-      
-        <content type="html"><![CDATA[<h3 id="神经网络中两个有趣的特点"><a href="#神经网络中两个有趣的特点" class="headerlink" title="神经网络中两个有趣的特点"></a>神经网络中两个有趣的特点</h3><ul><li>First, we find that there is no distinction between individual high level units and random linear combinations of high level units, according to various methods of unit analysis. It suggests that it is the space, rather than the individual units, that contains the semantic information in the high layers of neural networks.<br><br><strong> 高层级的网络激活单元不包含语义，语义存在于网络激活单元的空间向量中：某一次层的自然坐标和随机选择的激活单元组合得到的样本都有语义相似性。</strong></li><li>Second, we find that deep neural networks learn input-output mappings that are fairly discontinuous to a significant extent. We can cause the network to misclas- sify an image by applying a certain hardly perceptible perturbation, which is found by maximizing the network’s prediction error. In addition, the specific nature of these perturbations is not a random artifact of learning: the same perturbation can cause a different network, that was trained on a different subset of the dataset, to misclassify the same input.<br><br><strong> 对抗样本：对训练集做一些轻微的扰动，产生的样本，在训练好的模型上很可能得到错误的预测，并且这些样本即使是在使用不同的网络层数，参数，训练集训练得到的模型都会有这种现象。</strong></li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>数据类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Intriguing Properties Of Neural Networks]]></title>
+    <url>%2F2018%2F03%2F12%2FIntriguing-Properties-Of-Neural-Networks%2F</url>
+    <content type="text"><![CDATA[神经网络中两个有趣的特点 First, we find that there is no distinction between individual high level units and random linear combinations of high level units, according to various methods of unit analysis. It suggests that it is the space, rather than the individual units, that contains the semantic information in the high layers of neural networks. 高层级的网络激活单元不包含语义，语义存在于网络激活单元的空间向量中：某一次层的自然坐标和随机选择的激活单元组合得到的样本都有语义相似性。 Second, we find that deep neural networks learn input-output mappings that are fairly discontinuous to a significant extent. We can cause the network to misclas- sify an image by applying a certain hardly perceptible perturbation, which is found by maximizing the network’s prediction error. In addition, the specific nature of these perturbations is not a random artifact of learning: the same perturbation can cause a different network, that was trained on a different subset of the dataset, to misclassify the same input. 对抗样本：对训练集做一些轻微的扰动，产生的样本，在训练好的模型上很可能得到错误的预测，并且这些样本即使是在使用不同的网络层数，参数，训练集训练得到的模型都会有这种现象。]]></content>
       <categories>
-          
-          <category> machine learning </category>
-          
+        <category>machine learning</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Neural learning </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>难分样本挖掘</title>
-      <link href="/2018/03/12/Hard-Negative-Mining/"/>
-      <url>/2018/03/12/Hard-Negative-Mining/</url>
-      
-        <content type="html"><![CDATA[<p>Let’s say I give you a bunch of images that contain one or more people, and I give you bounding boxes for each one. Your classifier will need both positive training examples (person) and negative training examples (not person).</p><p>For each person, you create a positive training example by looking inside that bounding box. But how do you create useful negative examples?</p><p>A good way to start is to generate a bunch of random bounding boxes, and for each that doesn’t overlap with any of your positives, keep that new box as a negative.</p><p>OK, so you have positives and negatives, so you train a classifier, and to test it out, you run it on your training images again with a sliding window. But it turns out that your classifier isn’t very good, because it throws a bunch of false positives (people detected where there aren’t actually people).</p><p>A hard negative is when you take that falsely detected patch, and explicitly create a negative example out of that patch, and add that negative to your training set. When you retrain your classifier, it should perform better with this extra knowledge, and not make as many false positives.</p><p><a href="https://www.pyimagesearch.com/2014/11/10/histogram-oriented-gradients-object-detection/" target="_blank" rel="noopener">pyimagesearch</a></p><p><em>Apply hard-negative mining.</em> For each image and each possible scale of each image in your negative training set, apply the sliding window technique and slide your window across the image. At each window compute your HOG descriptors and apply your classifier. If your classifier (incorrectly) classifies a given window as an object (and it will, there will absolutely be false-positives), record the feature vector associated with the false-positive patch along with the probability of the classification. This approach is called <em>hard-negative mining</em></p>]]></content>
-      
-      
+      <tags>
+        <tag>Neural learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[难分样本挖掘]]></title>
+    <url>%2F2018%2F03%2F12%2FHard-Negative-Mining%2F</url>
+    <content type="text"><![CDATA[Let’s say I give you a bunch of images that contain one or more people, and I give you bounding boxes for each one. Your classifier will need both positive training examples (person) and negative training examples (not person). For each person, you create a positive training example by looking inside that bounding box. But how do you create useful negative examples? A good way to start is to generate a bunch of random bounding boxes, and for each that doesn’t overlap with any of your positives, keep that new box as a negative. OK, so you have positives and negatives, so you train a classifier, and to test it out, you run it on your training images again with a sliding window. But it turns out that your classifier isn’t very good, because it throws a bunch of false positives (people detected where there aren’t actually people). A hard negative is when you take that falsely detected patch, and explicitly create a negative example out of that patch, and add that negative to your training set. When you retrain your classifier, it should perform better with this extra knowledge, and not make as many false positives. pyimagesearch Apply hard-negative mining. For each image and each possible scale of each image in your negative training set, apply the sliding window technique and slide your window across the image. At each window compute your HOG descriptors and apply your classifier. If your classifier (incorrectly) classifies a given window as an object (and it will, there will absolutely be false-positives), record the feature vector associated with the false-positive patch along with the probability of the classification. This approach is called hard-negative mining]]></content>
       <categories>
-          
-          <category> machine learning </category>
-          
+        <category>machine learning</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Hard Negative Mining </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hexo next主题配置参考文档</title>
-      <link href="/2018/02/24/hexo/"/>
-      <url>/2018/02/24/hexo/</url>
-      
-        <content type="html"><![CDATA[<ul><li><a href="https://segmentfault.com/a/1190000009544924#articleHeader28" target="_blank" rel="noopener">1</a></li><li><a href="https://www.dingxuewen.com/2017/03/11/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%B8%89/" target="_blank" rel="noopener">2</a></li><li><a href="https://www.dingxuewen.com/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%E4%BA%8C/" target="_blank" rel="noopener">3</a></li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>Hard Negative Mining</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo next主题配置参考文档]]></title>
+    <url>%2F2018%2F02%2F24%2Fhexo%2F</url>
+    <content type="text"><![CDATA[1 2 3]]></content>
       <categories>
-          
-          <category> 前端 </category>
-          
+        <category>前端</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
 </search>
